@@ -1,0 +1,49 @@
+{
+  "_from": "mk-app-person-card",
+  "_id": "mk-app-person-card@1.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-Stvxll76TmqhQjlWuXrDfDQhi26TVMn94O/rwWbebvZARsYmTj6YHoE98rQgqb+VZvTl79XNl2oJ67Rj5RQbTQ==",
+  "_location": "/mk-app-person-card",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "mk-app-person-card",
+    "name": "mk-app-person-card",
+    "escapedName": "mk-app-person-card",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mk-app-person-card/-/mk-app-person-card-1.0.1.tgz",
+  "_shasum": "ddcd3990687d577afe16d989b14100be4c05303f",
+  "_spec": "mk-app-person-card",
+  "_where": "/home/zlj/my/github/self/mk-app-person-card/master/example",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ziaochina/mk-app-person-card/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "mk-app-person-card",
+  "directories": {
+    "example": "example"
+  },
+  "homepage": "https://github.com/ziaochina/mk-app-person-card#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "mk-app-person-card",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziaochina/mk-app-person-card.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

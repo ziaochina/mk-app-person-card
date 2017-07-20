@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "mk-component": "^1.0.5",
-    "mk-meta-engine": "^1.0.4",
+    "mk-meta-engine": "^1.0.5",
     "mk-utils": "^1.0.1",
     "moment": "^2.18.1",
     "react": "^15.6.1",

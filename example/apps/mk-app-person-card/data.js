@@ -7,7 +7,7 @@ export function getMeta() {
 			name: 'header',
 			component: 'Layout',
 			className: 'mk-app-person-card-header',
-			_visible: '{{data.other.isPop}}',
+			_visible: '{{!data.other.isPop}}',
 			children: [{
 				name: 'left',
 				component: 'Layout',
