@@ -39,6 +39,16 @@ class action {
         this.injections.reduce('load', payload)
     }
 
+    onOk =  () => {
+        return new Promise(async (reslove, reject) => {
+            const ret = await this.save()
+            if(  ret=== false )
+                reslove(false)
+            else
+                reslove(true)
+        })
+    }
+
     save = async () => {
         if (this.checkName(true).status == 'error'
             || this.checkMobile(true).status == 'error') {
@@ -48,7 +58,7 @@ class action {
                 'data.form.mobile',
                 'data.form.birthday'
             ])
-            return
+            return false
         }
 
         const form = this.metaAction.gf('data.form').toJS()
@@ -96,29 +106,7 @@ class action {
         }
     }
 
-    onOk = () => {
-        return new Promise((reslove, reject) => {
-            if (this.checkName(true).status == 'error'
-                || this.checkMobile(true).status == 'error') {
-                this.injections.reduce('setCheckFields', [
-                    'data.form.name',
-                    'data.form.sex',
-                    'data.form.mobile',
-                    'data.form.birthday'
-                ])
 
-                reslove(false)
-                return
-            }
-
-            const form = this.metaAction.gf('data.form').toJS()
-            form.birthday = form.birthday.format('YYYY-MM-DD')
-            if (form.dept) {
-                form.dept = this.metaAction.gf('data.other.departments').find(o => o.get('code') == form.dept).toJS()
-            }
-            reslove(form)
-        })
-    }
 
     checkName = (force) => {
         const checkFields = this.metaAction.gf('data.other.checkFields') || List()
