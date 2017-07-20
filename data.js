@@ -116,11 +116,11 @@ export function getMeta() {
 					onChange: "{{(d)=>$setField('data.form.birthday',d)}}"
 				}]
 			}, {
-				name: 'deptItem',
+				name: 'departmentItem',
 				component: 'Form.Item',
 				label: '部门',
 				children: [{
-					name: 'dept',
+					name: 'department',
 					component: 'Select',
 					dropdownFooter: {
 						name: 'add',
@@ -130,9 +130,9 @@ export function getMeta() {
 						children: '新增',
 						onClick: '{{$addDepartment}}'
 					},
-					value: '{{data.form.dept}}',
+					value: '{{data.form.department}}',
 					onFocus: '{{$departmentFocus}}',
-					onChange: "{{(v)=>$setField('data.form.dept', v)}}",
+					onChange: "{{(v)=>$setField('data.form.department', v)}}",
 					children: {
 						name: 'option',
 						component: 'Select.Option',

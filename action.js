@@ -31,7 +31,7 @@ class action {
         var response = await this.webapi.department.query()
         payload.departments = response
 
-        if (this.component.props.personId) {
+        if (this.component.props.personId || this.component.props.personId == 0) {
             response = await this.webapi.person.findById(this.component.props.personId)
             payload.person = response
         }
@@ -39,10 +39,10 @@ class action {
         this.injections.reduce('load', payload)
     }
 
-    onOk =  () => {
+    onOk = () => {
         return new Promise(async (reslove, reject) => {
             const ret = await this.save()
-            if(  ret=== false )
+            if (ret === false)
                 reslove(false)
             else
                 reslove(true)
@@ -63,14 +63,15 @@ class action {
 
         const form = this.metaAction.gf('data.form').toJS()
         form.birthday = form.birthday.format('YYYY-MM-DD')
-        if (!form.id) {
-            const response = await this.webapi.person.create(form)
+        if (form.id || form.id == 0) {
+            const response = await this.webapi.person.update(form)
             if (response) {
                 this.metaAction.toast('success', '保存人员成功')
                 this.injections.reduce('setPerson', response)
             }
+
         } else {
-            const response = await this.webapi.person.update(form)
+            const response = await this.webapi.person.create(form)
             if (response) {
                 this.metaAction.toast('success', '保存人员成功')
                 this.injections.reduce('setPerson', response)
