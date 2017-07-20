@@ -1,5 +1,15 @@
 import { Toast, Notification, Modal } from 'mk-component'
+import { fetch } from 'mk-utils'
 import './mock.js'
+
+fetch.config({
+	mock:true,
+	after:(response)=>{
+		if(response.result){
+			return response.value
+		}
+	}
+})
 
 var _options = {}
 

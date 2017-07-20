@@ -29,11 +29,11 @@ class action {
         const payload = {}
 
         var response = await this.webapi.department.query()
-        payload.departments = response.value
+        payload.departments = response
 
         if (this.component.props.personId) {
             response = await this.webapi.person.findById(this.component.props.personId)
-            payload.person = response.value
+            payload.person = response
         }
 
         this.injections.reduce('load', payload)
@@ -65,15 +65,15 @@ class action {
         form.birthday = form.birthday.format('YYYY-MM-DD')
         if (!form.id) {
             const response = await this.webapi.person.create(form)
-            if (response.value) {
+            if (response) {
                 this.metaAction.toast('success', '保存人员成功')
-                this.injections.reduce('setPerson', response.value)
+                this.injections.reduce('setPerson', response)
             }
         } else {
             const response = await this.webapi.person.update(form)
-            if (response.value) {
+            if (response) {
                 this.metaAction.toast('success', '保存人员成功')
-                this.injections.reduce('setPerson', response.value)
+                this.injections.reduce('setPerson', response)
             }
         }
 
@@ -93,16 +93,16 @@ class action {
     prev = async () => {
         const id = this.metaAction.gf('data.form.id')
         const response = await this.webapi.person.prev(id)
-        if (response.value) {
-            this.injections.reduce('setPerson', response.value)
+        if (response) {
+            this.injections.reduce('setPerson', response)
         }
     }
 
     next = async () => {
         const id = this.metaAction.gf('data.form.id')
         const response = await this.webapi.person.next(id)
-        if (response.value) {
-            this.injections.reduce('setPerson', response.value)
+        if (response) {
+            this.injections.reduce('setPerson', response)
         }
     }
 
@@ -124,7 +124,7 @@ class action {
 
     departmentFocus = async () => {
         const response = await this.webapi.department.query()
-        this.metaAction.sf('data.other.departments', fromJS(response.value))
+        this.metaAction.sf('data.other.departments', fromJS(response))
     }
 
     addDepartment = async () => {
