@@ -31,7 +31,7 @@ class action {
         var response = await this.webapi.department.query()
         payload.departments = response
 
-        if (this.component.props.personId) {
+        if (this.component.props.personId || this.component.props.personId == 0) {
             response = await this.webapi.person.findById(this.component.props.personId)
             payload.person = response
         }

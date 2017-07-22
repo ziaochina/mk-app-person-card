@@ -1,8 +1,8 @@
 {
   "_from": "mk-app-person-card",
-  "_id": "mk-app-person-card@1.0.1",
+  "_id": "mk-app-person-card@1.0.4",
   "_inBundle": false,
-  "_integrity": "sha512-Stvxll76TmqhQjlWuXrDfDQhi26TVMn94O/rwWbebvZARsYmTj6YHoE98rQgqb+VZvTl79XNl2oJ67Rj5RQbTQ==",
+  "_integrity": "sha512-EQrnIQx5WTVErMLaKJ+s9TNyUpLRYq3QSHI9zImwhQdYEb+HBtEFjou/DIsddBdwR+FwmUGnw6YN1L3F4JW3LQ==",
   "_location": "/mk-app-person-card",
   "_phantomChildren": {},
   "_requested": {
@@ -19,8 +19,8 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/mk-app-person-card/-/mk-app-person-card-1.0.1.tgz",
-  "_shasum": "ddcd3990687d577afe16d989b14100be4c05303f",
+  "_resolved": "https://registry.npmjs.org/mk-app-person-card/-/mk-app-person-card-1.0.4.tgz",
+  "_shasum": "e88455fda1de90204bda0aafa65fe36f535d7b8e",
   "_spec": "mk-app-person-card",
   "_where": "/home/zlj/my/github/self/mk-app-person-card/master/example",
   "author": "",
@@ -45,5 +45,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.1"
+  "version": "1.0.4"
 }
