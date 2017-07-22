@@ -1,6 +1,6 @@
 # mk-app-person-card
 
-人员列表应用模板，可以clone该模板修改为需要列表界面
+人员列表应用模板，可以clone该app,然后修改为需要列表应用
 
 [在线演示](https://ziaochina.github.io/mk-app-person-card/)
 
